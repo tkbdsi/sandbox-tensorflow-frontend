@@ -1,10 +1,11 @@
 import React from "react";
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-    </div>
+    <main>
+      <h1>Tensorflow Sandbox</h1>
+    </main>
   );
 }
 
