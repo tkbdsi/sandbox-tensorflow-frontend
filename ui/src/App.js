@@ -1,5 +1,8 @@
 import React from "react";
 
+// My Components
+import MakePlot from "./components/makeplot/MakePlot";
+
 // Third Party Libraries
 import * as tf from '@tensorflow/tfjs';
 
@@ -16,11 +19,10 @@ const App = () => {
 
   const [xdata, ydata] = makeSineFunction()
 
-  console.log(xdata);
-
   return (
-    <main>
+    <main style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <h1>Tensorflow Sandbox</h1>
+      <MakePlot xdata={xdata} ydata={ydata} />
     </main>
   );
 }
