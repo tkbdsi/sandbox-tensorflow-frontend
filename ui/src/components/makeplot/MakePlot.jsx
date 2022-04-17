@@ -1,10 +1,26 @@
 import React from "react";
 
-const MakePlot = () => {
+import Plot from 'react-plotly.js';
+
+const MakePlot = ({xdata, ydata}) => {
   return (
-    <div>
-      Make Plot
-    </div>
+    <Plot
+      data={[
+        {
+          x: xdata,
+          y: ydata,
+          type: 'scatter',
+          mode: 'lines+markers',
+          marker: {color: 'blue'}
+        }
+      ]}
+      layout={
+        {
+          width: 400,
+          height: 400,
+        }
+      }
+    />
   )
 }
 
