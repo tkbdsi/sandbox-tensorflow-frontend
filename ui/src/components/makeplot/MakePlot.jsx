@@ -2,7 +2,7 @@ import React from "react";
 
 import Plot from 'react-plotly.js';
 
-const MakePlot = ({xdata, ydata}) => {
+const MakePlot = ({xdata, ydata, pred}) => {
   return (
     <Plot
       data={[
@@ -12,6 +12,13 @@ const MakePlot = ({xdata, ydata}) => {
           type: 'scatter',
           mode: 'lines+markers',
           marker: {color: 'blue'}
+        },
+        {
+          x: xdata,
+          y: pred,
+          type: 'scatter',
+          mode: 'lines+markers',
+          marker: {color: 'red'}
         }
       ]}
       layout={
